@@ -120,6 +120,7 @@ function emailValidatorBackendPlugin(): Plugin {
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/my-portfolio/',
   plugins: [react(), tailwindcss(), emailValidatorBackendPlugin()],
   server: {
     port: 3000,
