@@ -3,11 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   X,
   ExternalLink,
-  ShieldAlert,
-  ShieldCheck,
   CreditCard,
   UtensilsCrossed,
-  ArrowRight,
   CheckCircle,
   Clock,
   Sparkles,
@@ -71,13 +68,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   // 2. Expense Tracker Simulator
   const [expenses, setExpenses] = useState([
-    { id: 1, name: 'Cloud Server Hosting', category: 'Tech', amount: 850, date: 'Today' },
-    { id: 2, name: 'AI & Data Course Books', category: 'Education', amount: 1200, date: 'Yesterday' },
-    { id: 3, name: 'Cafeteria & Lunch', category: 'Food', amount: 240, date: '2 days ago' },
+    { id: 1, name: 'Cloud Server Hosting', category: 'Tech', amount: 850 },
+    { id: 2, name: 'AI & Data Course Books', category: 'Education', amount: 1200 },
+    { id: 3, name: 'Cafeteria & Lunch', category: 'Food', amount: 240 },
   ]);
   const [newExpName, setNewExpName] = useState('');
   const [newExpAmount, setNewExpAmount] = useState('');
-  const [newExpCategory, setNewExpCategory] = useState('Tech');
+  const [newExpCategory] = useState('Tech');
 
   const addExpense = (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,8 +85,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         id: Date.now(),
         name: newExpName,
         category: newExpCategory,
-        amount: parseFloat(newExpAmount),
-        date: 'Just now'
+        amount: parseFloat(newExpAmount)
       },
       ...expenses
     ]);
@@ -134,16 +130,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             soundFx.playClick();
             onClose();
           }}
-          className="fixed inset-0 bg-black/85 backdrop-blur-md"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm"
         />
 
         {/* Modal Window */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel-glow border border-cyan-500/40 p-6 sm:p-8 z-10 my-auto shadow-2xl"
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.96 }}
+          transition={{ duration: 0.2 }}
+          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#111726] border border-slate-800 p-6 sm:p-8 z-10 my-auto shadow-xl"
         >
           {/* Close Button */}
           <button
@@ -152,18 +148,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               onClose();
             }}
             onMouseEnter={() => soundFx.playHover()}
-            className="absolute top-6 right-6 p-2 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white hover:border-cyan-400 transition-all cursor-pointer z-20"
+            className="absolute top-6 right-6 p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer z-20"
           >
             <X className="w-5 h-5" />
           </button>
 
           {/* Modal Header */}
           <div className="mb-6">
-            <div className="flex items-center gap-2 font-mono text-xs text-cyan-400 tracking-wider mb-2">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <div className="flex items-center gap-2 font-mono text-xs text-slate-400 tracking-wider mb-2">
               <span>{project.category}</span>
               <span>&bull;</span>
-              <span className="text-purple-400">{project.badge}</span>
+              <span className="text-indigo-400">{project.badge}</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-2">
@@ -178,7 +173,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <div className="grid grid-cols-3 gap-3 mb-6">
             {project.metrics.map((m, idx) => (
               <div key={idx} className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
-                <div className="font-display font-bold text-base sm:text-lg text-cyan-300">
+                <div className="font-display font-bold text-base sm:text-lg text-indigo-300">
                   {m.value}
                 </div>
                 <div className="font-mono text-[10px] text-slate-400 uppercase tracking-wider">
@@ -189,15 +184,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* INTERACTIVE DEMO SIMULATOR CONTAINER */}
-          <div className="mb-8 p-6 rounded-2xl bg-[#070714] border border-cyan-500/30 relative overflow-hidden">
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+          <div className="mb-6 p-5 sm:p-6 rounded-xl bg-slate-900 border border-slate-800">
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-cyan-400" />
+                <Sparkles className="w-4 h-4 text-indigo-400" />
                 <span className="font-mono text-xs font-semibold text-white uppercase tracking-wider">
-                  Interactive Live Simulator // Test System
+                  Interactive Simulator
                 </span>
               </div>
-              <span className="text-[11px] font-mono text-emerald-400">STATUS: READY</span>
+              <span className="text-[11px] font-mono text-emerald-400">READY</span>
             </div>
 
             {/* 1. Transaction Risk Classifier Demo */}
@@ -212,7 +207,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                       type="number"
                       value={txnAmount}
                       onChange={(e) => setTxnAmount(Number(e.target.value))}
-                      className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white font-mono text-sm focus:border-cyan-400 outline-none"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white font-mono text-sm focus:border-indigo-500 outline-none"
                     />
                   </div>
 
@@ -223,7 +218,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     <select
                       value={isForeignLocation ? 'yes' : 'no'}
                       onChange={(e) => setIsForeignLocation(e.target.value === 'yes')}
-                      className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white font-mono text-sm focus:border-cyan-400 outline-none"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white font-mono text-sm focus:border-indigo-500 outline-none"
                     >
                       <option value="yes">Yes (Cross-border)</option>
                       <option value="no">No (Domestic IP)</option>
@@ -238,7 +233,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                       type="number"
                       value={velocityMinutes}
                       onChange={(e) => setVelocityMinutes(Number(e.target.value))}
-                      className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white font-mono text-sm focus:border-cyan-400 outline-none"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white font-mono text-sm focus:border-indigo-500 outline-none"
                     />
                   </div>
                 </div>
@@ -246,21 +241,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 <button
                   onClick={calculateRisk}
                   onMouseEnter={() => soundFx.playHover()}
-                  className="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-cyan-500 font-mono text-xs font-bold text-white tracking-wider hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center gap-2"
+                  className="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-mono text-xs font-semibold text-white tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-2"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
                   RUN RISK CLASSIFICATION ENGINE
                 </button>
 
                 {riskResult && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 mt-3"
-                  >
+                  <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4 mt-3">
                     <div className="flex items-center gap-3">
                       <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center font-mono font-black text-lg border"
+                        className="w-12 h-12 rounded-xl flex items-center justify-center font-mono font-bold text-lg border"
                         style={{
                           borderColor: riskResult.color,
                           color: riskResult.color,
@@ -270,17 +261,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                         {riskResult.score}
                       </div>
                       <div>
-                        <div className="flex items-center gap-2">
-                          <span
-                            className="font-mono text-xs font-bold px-2 py-0.5 rounded"
-                            style={{
-                              backgroundColor: `${riskResult.color}25`,
-                              color: riskResult.color
-                            }}
-                          >
-                            RISK TIER: {riskResult.tier}
-                          </span>
-                        </div>
+                        <span
+                          className="font-mono text-xs font-bold px-2 py-0.5 rounded"
+                          style={{
+                            backgroundColor: `${riskResult.color}25`,
+                            color: riskResult.color
+                          }}
+                        >
+                          RISK TIER: {riskResult.tier}
+                        </span>
                         <p className="text-xs text-slate-300 mt-1">
                           {riskResult.reason}
                         </p>
@@ -289,7 +278,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     <span className="font-mono text-[11px] text-slate-400 shrink-0">
                       Evaluated in 18ms
                     </span>
-                  </motion.div>
+                  </div>
                 )}
               </div>
             )}
@@ -303,18 +292,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     placeholder="Expense name"
                     value={newExpName}
                     onChange={(e) => setNewExpName(e.target.value)}
-                    className="sm:col-span-2 px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white font-mono text-xs outline-none focus:border-cyan-400"
+                    className="sm:col-span-2 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white font-mono text-xs outline-none focus:border-indigo-500"
                   />
                   <input
                     type="number"
                     placeholder="Amount (₹)"
                     value={newExpAmount}
                     onChange={(e) => setNewExpAmount(e.target.value)}
-                    className="px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white font-mono text-xs outline-none focus:border-cyan-400"
+                    className="px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white font-mono text-xs outline-none focus:border-indigo-500"
                   />
                   <button
                     type="submit"
-                    className="py-2 px-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-colors cursor-pointer"
+                    className="py-2 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-mono text-xs font-semibold transition-colors cursor-pointer"
                   >
                     + Record
                   </button>
@@ -324,16 +313,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   {expenses.map((exp) => (
                     <div
                       key={exp.id}
-                      className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs font-mono"
+                      className="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/60 border border-slate-700/80 text-xs font-mono"
                     >
                       <div className="flex items-center gap-2">
-                        <CreditCard className="w-3.5 h-3.5 text-cyan-400" />
+                        <CreditCard className="w-3.5 h-3.5 text-indigo-400" />
                         <span className="text-slate-200">{exp.name}</span>
                         <span className="text-[10px] text-slate-500 px-1.5 py-0.5 rounded bg-slate-800">
                           {exp.category}
                         </span>
                       </div>
-                      <div className="font-bold text-cyan-300">
+                      <div className="font-bold text-slate-200">
                         ₹{exp.amount.toLocaleString()}
                       </div>
                     </div>
@@ -352,9 +341,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                         key={dish}
                         onClick={() => generateToken(dish)}
                         onMouseEnter={() => soundFx.playHover()}
-                        className="px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-400 text-xs font-mono text-slate-200 hover:text-cyan-300 transition-colors cursor-pointer flex items-center gap-1.5"
+                        className="px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 hover:border-slate-600 text-xs font-mono text-slate-200 transition-colors cursor-pointer flex items-center gap-1.5"
                       >
-                        <UtensilsCrossed className="w-3.5 h-3.5 text-purple-400" />
+                        <UtensilsCrossed className="w-3.5 h-3.5 text-indigo-400" />
                         <span>Order: {dish}</span>
                       </button>
                     )
@@ -362,21 +351,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 </div>
 
                 {canteenToken ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="p-4 rounded-xl bg-slate-900/90 border border-purple-500/40 flex flex-col sm:flex-row items-center justify-between gap-4"
-                  >
+                  <div className="p-4 rounded-xl bg-slate-800/90 border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-lg font-black text-cyan-400">
+                        <span className="font-mono text-base font-bold text-white">
                           {canteenToken.id}
                         </span>
                         <span
-                          className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold ${
+                          className={`px-2 py-0.5 rounded text-[10px] font-mono font-medium ${
                             canteenToken.status === 'Ready'
-                              ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
-                              : 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 animate-pulse'
+                              ? 'bg-emerald-500/20 text-emerald-400'
+                              : 'bg-yellow-500/20 text-yellow-300'
                           }`}
                         >
                           {canteenToken.status === 'Ready' ? 'COLLECTION READY' : 'PREPARING IN KITCHEN'}
@@ -398,9 +383,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                         </span>
                       )}
                     </div>
-                  </motion.div>
+                  </div>
                 ) : (
-                  <div className="p-4 rounded-xl bg-slate-900/40 border border-dashed border-slate-800 text-center font-mono text-xs text-slate-500">
+                  <div className="p-4 rounded-xl bg-slate-800/30 border border-dashed border-slate-800 text-center font-mono text-xs text-slate-500">
                     Click any menu item above to issue an instant real-time kitchen queue token.
                   </div>
                 )}
@@ -417,7 +402,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               {project.technologies.map((t, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 font-mono text-xs text-cyan-300"
+                  className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 font-mono text-xs text-slate-300"
                 >
                   {t}
                 </span>
@@ -426,17 +411,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Action Footer */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-800">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-5 border-t border-slate-800">
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => soundFx.playHover()}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-400 text-white font-mono text-xs font-semibold tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-white font-mono text-xs font-semibold tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer"
             >
-              <GithubIcon className="w-4 h-4 text-cyan-400" />
+              <GithubIcon className="w-4 h-4 text-slate-400" />
               <span>VIEW SOURCE CODE ON GITHUB</span>
-              <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+              <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
             </a>
 
             <button
@@ -444,7 +429,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 soundFx.playClick();
                 onClose();
               }}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-mono text-xs font-semibold tracking-wider hover:opacity-90 transition-opacity cursor-pointer"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-mono text-xs font-semibold tracking-wider transition-colors cursor-pointer"
             >
               CLOSE PREVIEW
             </button>

@@ -3,9 +3,7 @@ import {
   ArrowUp,
   Terminal,
   Mail,
-  Phone,
-  Heart,
-  Cpu
+  Phone
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { portfolioData } from '../../data/portfolioData';
@@ -20,32 +18,32 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative border-t border-slate-900 bg-[#02000c] pt-16 pb-12 px-4 sm:px-8 overflow-hidden z-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer className="relative border-t border-slate-800/80 bg-[#0b0f19] pt-14 pb-10 px-4 sm:px-8 z-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand & Tagline */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center">
-              <Terminal className="w-4 h-4 text-cyan-400" />
+          <div className="flex items-center gap-2 mb-1.5">
+            <div className="w-7 h-7 rounded-lg bg-[#111726] border border-slate-800 flex items-center justify-center">
+              <Terminal className="w-3.5 h-3.5 text-indigo-400" />
             </div>
-            <span className="font-display font-bold text-lg text-white">
+            <span className="font-display font-semibold text-base text-white">
               {personal.name}
             </span>
-            <span className="font-mono text-xs text-cyan-400">// JG UNIVERSITY</span>
+            <span className="font-mono text-xs text-slate-500">&bull; JG UNIVERSITY</span>
           </div>
           <p className="font-mono text-xs text-slate-400 max-w-sm">
-            {personal.tagline} B.Tech CSE student at JG University. Focused on Python, AI Engineering, and full stack solutions.
+            {personal.tagline} B.Tech CSE student at JG University.
           </p>
         </div>
 
-        {/* Quick Social Links */}
-        <div className="flex items-center gap-3">
+        {/* Quick Social Links & Scroll Top */}
+        <div className="flex items-center gap-2.5">
           <a
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={() => soundFx.playHover()}
-            className="p-3 rounded-xl glass-panel border border-slate-800 hover:border-cyan-400 text-slate-400 hover:text-white transition-all cursor-pointer"
+            className="p-2.5 rounded-lg bg-[#111726] border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors cursor-pointer"
             title="GitHub"
           >
             <GithubIcon className="w-4 h-4" />
@@ -55,7 +53,7 @@ export const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={() => soundFx.playHover()}
-            className="p-3 rounded-xl glass-panel border border-slate-800 hover:border-purple-400 text-slate-400 hover:text-white transition-all cursor-pointer"
+            className="p-2.5 rounded-lg bg-[#111726] border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors cursor-pointer"
             title="LinkedIn"
           >
             <LinkedinIcon className="w-4 h-4" />
@@ -63,7 +61,7 @@ export const Footer: React.FC = () => {
           <a
             href={`mailto:${personal.email}`}
             onMouseEnter={() => soundFx.playHover()}
-            className="p-3 rounded-xl glass-panel border border-slate-800 hover:border-cyan-400 text-slate-400 hover:text-white transition-all cursor-pointer"
+            className="p-2.5 rounded-lg bg-[#111726] border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors cursor-pointer"
             title="Email"
           >
             <Mail className="w-4 h-4" />
@@ -71,8 +69,8 @@ export const Footer: React.FC = () => {
           <a
             href={`tel:${personal.phoneRaw || '8866365762'}`}
             onMouseEnter={() => soundFx.playHover()}
-            className="p-3 rounded-xl glass-panel border border-slate-800 hover:border-purple-400 text-slate-400 hover:text-white transition-all cursor-pointer"
-            title="Call Phone"
+            className="p-2.5 rounded-lg bg-[#111726] border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors cursor-pointer"
+            title="Phone"
           >
             <Phone className="w-4 h-4" />
           </a>
@@ -81,7 +79,7 @@ export const Footer: React.FC = () => {
           <button
             onClick={scrollToTop}
             onMouseEnter={() => soundFx.playHover()}
-            className="p-3 rounded-xl bg-gradient-to-tr from-cyan-500 to-purple-600 text-white shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ml-3"
+            className="p-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition-colors cursor-pointer ml-2"
             title="Scroll to Top"
           >
             <ArrowUp className="w-4 h-4" />
@@ -90,14 +88,12 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-500 gap-4">
+      <div className="max-w-7xl mx-auto mt-10 pt-5 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-500 gap-3">
         <div>
           &copy; {new Date().getFullYear()} Ghanchi Saad. All rights reserved.
         </div>
         <div className="flex items-center gap-2">
-          <span>Engineered with React & Tailwind</span>
-          <span className="w-1 h-1 rounded-full bg-slate-700" />
-          <span className="text-cyan-400">Future Ready</span>
+          <span>B.Tech CSE &bull; JG University</span>
         </div>
       </div>
     </footer>

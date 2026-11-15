@@ -1,20 +1,1248 @@
-<!doctype html>
-<html lang="en" class="dark scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#030014" />
-    <title>Ghanchi Saad | Computer Science Engineer & Software Developer</title>
-    <meta name="description" content="Portfolio of Ghanchi Saad - Computer Science Engineering student at JG University, Python developer, and future AI engineer exploring intelligent systems, automation, and modern full-stack development." />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#030014] text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0f19">
+  <title>Ghanchi Saad | Software Engineer & Python Developer | B.Tech CSE JG University</title>
+  <meta name="description" content="Portfolio of Ghanchi Saad - Computer Science Engineering student at JG University, Ahmedabad. Specializing in Python, AI systems, and modern full-stack development.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Pure CSS3 Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. SITE HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-link" aria-label="Ghanchi Saad Home">
+        <div class="brand-icon">
+          <!-- Terminal Icon SVG -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">GHANCHI SAAD</span>
+          <span class="brand-role">JG UNIV &bull; B.TECH CSE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#interests" class="nav-link">Interests</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-cta-nav">
+          <span>LET'S CONNECT</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobileToggle" class="mobile-toggle" aria-label="Open Mobile Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <button id="mobileDrawerClose" class="mobile-drawer-close" aria-label="Close Mobile Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#interests">Interests</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn-primary" style="justify-content: center; width: 100%;">LET'S CONNECT</a>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         2. HERO SECTION
+         ======================================================================= -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <!-- Status Pill -->
+        <div class="hero-status-pill">
+          <span class="status-dot"></span>
+          <span>JG University &bull; B.Tech CSE &bull; Available for Opportunities</span>
+        </div>
+
+        <div class="hero-eyebrow">SOFTWARE ENGINEER &bull; FUTURE AI ARCHITECT</div>
+        <h1 class="hero-title">Hey, I'm Ghanchi Saad.</h1>
+        <p class="hero-tagline">"Building Today, Exploring Tomorrow."</p>
+
+        <!-- Dynamic Typing Role Line -->
+        <div class="hero-role-line">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+          <span style="color: #64748b;">&gt;</span>
+          <span id="typingRole" class="role-typing-text">Python Developer</span>
+          <span class="role-cursor"></span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            <span>EXPLORE MY WORK</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>LET'S CONNECT</span>
+          </a>
+        </div>
+
+        <!-- Stats Grid (Balanced spacing, zero empty space) -->
+        <div class="hero-stats-grid">
+          <div class="stat-card">
+            <span class="stat-value">JG University</span>
+            <span class="stat-label">Current B.Tech</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">LJ Polytechnic</span>
+            <span class="stat-label">Diploma Foundation</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">Brainybeam</span>
+            <span class="stat-label">Industry Exp</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">3+ Deployed</span>
+            <span class="stat-label">Core Projects</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. ABOUT SECTION
+         ======================================================================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">01. Intel & Biography</span>
+          <h2 class="section-title">Engineering Mindset & Identity</h2>
+          <p class="section-subtitle">Driven by relentless curiosity, algorithmic elegance, and a vision for future-ready intelligent software.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Profile ID Card -->
+          <div class="card">
+            <div class="profile-card-header">
+              <span style="font-weight: 600; color: #f1f5f9;">DEVELOPER PROFILE</span>
+              <span style="color: #6366f1;">JG UNIVERSITY</span>
+            </div>
+
+            <div class="profile-avatar-block">
+              <div class="profile-avatar">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <h3 class="profile-name">Ghanchi Saad</h3>
+              <p class="profile-sub">B.Tech CSE at JG University &bull; LJ Polytechnic Alum</p>
+            </div>
+
+            <div class="profile-info-list">
+              <div class="info-row">
+                <span class="info-label">CURRENT DEGREE:</span>
+                <span class="info-val">B.Tech CSE (JG University)</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">FOUNDATION:</span>
+                <span class="info-val">Diploma (LJ Polytechnic)</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">SPECIALIZATION:</span>
+                <span class="info-val">AI & Python Systems</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">INTERNSHIP:</span>
+                <span class="info-val">Brainybeam Info-Tech</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">CONTACT EMAIL:</span>
+                <span class="info-val">ghanchisaad082@gmail.com</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">MOBILE / DIRECT:</span>
+                <span class="info-val">+91 88663 65762</span>
+              </div>
+              <div class="info-row" style="border-bottom: none;">
+                <span class="info-label">LOCATION:</span>
+                <span class="info-val">Ahmedabad, Gujarat, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Bio & Education -->
+          <div class="about-right-stack">
+            <div class="card bio-card">
+              <h3>Who I Am & What Drives Me</h3>
+              <p>I am currently pursuing my B.Tech in Computer Science Engineering at JG University, Ahmedabad, after building a rigorous technical foundation during my Diploma at LJ Polytechnic. I focus on creating scalable software architectures with Python, developing modern full-stack applications, and engineering intelligent software solutions that bridge today's code with tomorrow's possibilities.</p>
+              <p>When I'm not writing algorithmic Python scripts or architecting full-stack systems, you'll find me immersed in competitive gaming, discussing breakthrough technologies with friends, or dissecting how the next generation of artificial intelligence can transform everyday human productivity.</p>
+            </div>
+
+            <!-- Education Breakdown -->
+            <div class="education-subgrid">
+              <div class="edu-item-card">
+                <div>
+                  <div class="edu-badge-row">
+                    <span class="badge-pill">CURRENT B.TECH CSE</span>
+                    <span class="edu-duration">Present</span>
+                  </div>
+                  <h4 class="edu-title">B.Tech in Computer Science</h4>
+                  <p class="edu-inst">JG University, Ahmedabad</p>
+                  <p class="edu-desc">Deepening expertise across artificial intelligence algorithms, distributed systems, predictive modeling, and scalable full-stack web applications.</p>
+                </div>
+                <ul class="edu-highlights">
+                  <li>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>AI, Machine Learning & Algorithms at JG University</span>
+                  </li>
+                  <li>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Python systems, MERN full-stack & production architecture</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="edu-item-card">
+                <div>
+                  <div class="edu-badge-row">
+                    <span class="badge-pill">DIPLOMA FOUNDATION</span>
+                    <span class="edu-duration">Completed</span>
+                  </div>
+                  <h4 class="edu-title">Diploma in Computer Engineering</h4>
+                  <p class="edu-inst">LJ Polytechnic, Ahmedabad</p>
+                  <p class="edu-desc">Established core technical competence in hardware architecture, programming paradigms, relational database systems, and disciplined logic building.</p>
+                </div>
+                <ul class="edu-highlights">
+                  <li>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Core programming logic & computational problem solving</span>
+                  </li>
+                  <li>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Graduated with strong practical engineering fundamentals</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Core Traits -->
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">
+                CORE ATTRIBUTES & PASSIONS
+              </div>
+              <div class="traits-grid">
+                <div class="trait-box">
+                  <div class="trait-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  </div>
+                  <div class="trait-content">
+                    <h5>Curious Learner</h5>
+                    <p>Always researching bleeding-edge frameworks & AI paradigms</p>
+                  </div>
+                </div>
+                <div class="trait-box">
+                  <div class="trait-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                  </div>
+                  <div class="trait-content">
+                    <h5>Tech Explorer</h5>
+                    <p>Passionate about experimenting with new tools and stacks</p>
+                  </div>
+                </div>
+                <div class="trait-box">
+                  <div class="trait-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  </div>
+                  <div class="trait-content">
+                    <h5>Problem Solver</h5>
+                    <p>Transforms analytical logic into clean, robust code</p>
+                  </div>
+                </div>
+                <div class="trait-box">
+                  <div class="trait-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="2"></rect></svg>
+                  </div>
+                  <div class="trait-content">
+                    <h5>Gamer & Friend</h5>
+                    <p>Thrives in collaborative teamwork, strategic thinking & gaming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SKILLS & TECHNICAL ARSENAL
+         ======================================================================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">02. Technical Arsenal</span>
+          <h2 class="section-title">Core Technologies & Capabilities</h2>
+          <p class="section-subtitle">Focused, pragmatic software stack backed by genuine problem-solving curiosity. Strictly real-world competencies—no arbitrary percentage gimmicks.</p>
+        </div>
+
+        <!-- 5 Core Skills Cards -->
+        <div class="skills-grid">
+          <!-- Skill 1: Python -->
+          <div class="skill-card">
+            <div>
+              <div class="skill-top">
+                <div class="skill-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                </div>
+                <div class="skill-level-block">
+                  <span class="badge-pill">Core</span>
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #6366f1; margin-top: 2px;">Core Strength</div>
+                </div>
+              </div>
+              <h3 class="skill-name">
+                <span>Python</span>
+                <span class="core-tag">Core Specialty</span>
+              </h3>
+              <p class="skill-desc">Object-oriented programming, algorithmic scripting, automation, backend logic, and data analysis pipelines.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="tag-pill">OOP Principles</span>
+              <span class="tag-pill">Data Structures</span>
+              <span class="tag-pill">Automation Scripts</span>
+              <span class="tag-pill">Backend Logic</span>
+              <span class="tag-pill">Scripting</span>
+            </div>
+          </div>
+
+          <!-- Skill 2: SQL -->
+          <div class="skill-card">
+            <div>
+              <div class="skill-top">
+                <div class="skill-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </div>
+                <div class="skill-level-block">
+                  <span class="badge-pill">Database</span>
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Proficient</div>
+                </div>
+              </div>
+              <h3 class="skill-name">SQL</h3>
+              <p class="skill-desc">Relational database schema modeling, complex joins, data indexing, aggregation queries, and integrity constraints.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="tag-pill">Relational Schema</span>
+              <span class="tag-pill">Complex Queries & Joins</span>
+              <span class="tag-pill">Data Integrity</span>
+              <span class="tag-pill">Normalization</span>
+              <span class="tag-pill">CRUD</span>
+            </div>
+          </div>
+
+          <!-- Skill 3: HTML5 -->
+          <div class="skill-card">
+            <div>
+              <div class="skill-top">
+                <div class="skill-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div class="skill-level-block">
+                  <span class="badge-pill">Frontend</span>
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Solid Foundation</div>
+                </div>
+              </div>
+              <h3 class="skill-name">HTML5</h3>
+              <p class="skill-desc">Semantic markup, accessible web standards, SEO-friendly hierarchy, and modern web application scaffolding.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="tag-pill">Semantic Elements</span>
+              <span class="tag-pill">Web Accessibility (a11y)</span>
+              <span class="tag-pill">DOM Hierarchy</span>
+              <span class="tag-pill">HTML5 APIs</span>
+            </div>
+          </div>
+
+          <!-- Skill 4: CSS3 -->
+          <div class="skill-card">
+            <div>
+              <div class="skill-top">
+                <div class="skill-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+                </div>
+                <div class="skill-level-block">
+                  <span class="badge-pill">Frontend</span>
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Advanced Styling</div>
+                </div>
+              </div>
+              <h3 class="skill-name">CSS3</h3>
+              <p class="skill-desc">Responsive layouts, Flexbox, CSS Grid, clean styling, minimal UI architecture, and smooth performance.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="tag-pill">Flexbox & Grid</span>
+              <span class="tag-pill">Responsive Design</span>
+              <span class="tag-pill">Custom Properties</span>
+              <span class="tag-pill">CSS Architecture</span>
+            </div>
+          </div>
+
+          <!-- Skill 5: JavaScript -->
+          <div class="skill-card">
+            <div>
+              <div class="skill-top">
+                <div class="skill-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="skill-level-block">
+                  <span class="badge-pill">Scripting</span>
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Active Growth</div>
+                </div>
+              </div>
+              <h3 class="skill-name">JavaScript</h3>
+              <p class="skill-desc">ES6+ fundamentals, DOM manipulation, asynchronous promises, event-driven programming, and dynamic web experiences.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="tag-pill">ES6+ Syntax</span>
+              <span class="tag-pill">DOM & Event Handling</span>
+              <span class="tag-pill">Async / Await / Fetch</span>
+              <span class="tag-pill">Client Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Learning Section -->
+        <div class="learning-box">
+          <div class="learning-header">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">
+                Active Research
+              </div>
+              <h3>Currently Learning & Expanding Horizons</h3>
+            </div>
+            <span class="badge-pill">CONTINUOUS EVOLUTION</span>
+          </div>
+
+          <div class="learning-grid">
+            <div class="learning-item">
+              <div>
+                <div class="learning-item-top">
+                  <div class="learning-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  </div>
+                  <span class="badge-pill">Advanced</span>
+                </div>
+                <h4>Advanced Python</h4>
+                <p>Concurrency, asynchronous programming (asyncio), architectural patterns, and performance optimization.</p>
+              </div>
+              <div class="learning-footer">
+                <span>IN PROGRESS</span>
+                <span class="status-dot"></span>
+              </div>
+            </div>
+
+            <div class="learning-item">
+              <div>
+                <div class="learning-item-top">
+                  <div class="learning-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                  </div>
+                  <span class="badge-pill">Web</span>
+                </div>
+                <h4>Modern JavaScript</h4>
+                <p>Deep dive into reactive frontends, state management, modern web APIs, and modular architectures.</p>
+              </div>
+              <div class="learning-footer">
+                <span>IN PROGRESS</span>
+                <span class="status-dot"></span>
+              </div>
+            </div>
+
+            <div class="learning-item">
+              <div>
+                <div class="learning-item-top">
+                  <div class="learning-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                  </div>
+                  <span class="badge-pill">Full Stack</span>
+                </div>
+                <h4>Full Stack Engineering</h4>
+                <p>End-to-end web architectures, RESTful API development, database connection pooling, and deployment.</p>
+              </div>
+              <div class="learning-footer">
+                <span>IN PROGRESS</span>
+                <span class="status-dot"></span>
+              </div>
+            </div>
+
+            <div class="learning-item">
+              <div>
+                <div class="learning-item-top">
+                  <div class="learning-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M3 9h3v6H3zM18 9h3v6h-3zM9 3v3h6V3zM9 18v3h6v-3z"></path></svg>
+                  </div>
+                  <span class="badge-pill">AI & ML</span>
+                </div>
+                <h4>AI & Machine Learning</h4>
+                <p>Predictive modeling, neural networks, feature engineering, classification algorithms, and Scikit-learn.</p>
+              </div>
+              <div class="learning-footer">
+                <span>IN PROGRESS</span>
+                <span class="status-dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. CAREER INTERESTS
+         ======================================================================= -->
+    <section id="interests" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">03. Future Horizons</span>
+          <h2 class="section-title">Career Trajectory & Passions</h2>
+          <p class="section-subtitle">Three focused pillars driving my technological ambition: from neural intelligence to high-performance Python backends and full-stack systems.</p>
+        </div>
+
+        <div class="interests-grid">
+          <!-- Pillar 1: AI Engineering -->
+          <div class="interest-card">
+            <div>
+              <div class="interest-top">
+                <span class="badge-pill">FUTURE SPECIALIZATION</span>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">01 / 03</span>
+              </div>
+              <div class="interest-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M3 9h3v6H3zM18 9h3v6h-3zM9 3v3h6V3zM9 18v3h6v-3z"></path></svg>
+              </div>
+              <h3>AI ENGINEERING</h3>
+              <div class="interest-sub">Intelligent Systems & Neural Architectures</div>
+              <p class="interest-desc">Explore artificial intelligence, machine learning and intelligent applications.</p>
+              <p class="interest-vision">Passionate about leveraging mathematical models, statistical learning, and neural network pipelines to solve real-world complexities. Aiming to build intelligent systems that autonomously learn, adapt, and drive predictive decision-making.</p>
+            </div>
+            <div class="interest-tags">
+              <span class="tag-pill">Artificial Intelligence</span>
+              <span class="tag-pill">Machine Learning</span>
+              <span class="tag-pill">Neural Networks</span>
+              <span class="tag-pill">Predictive Systems</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Python Development -->
+          <div class="interest-card">
+            <div>
+              <div class="interest-top">
+                <span class="badge-pill">CORE FOUNDATION</span>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">02 / 03</span>
+              </div>
+              <div class="interest-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              </div>
+              <h3>PYTHON DEVELOPMENT</h3>
+              <div class="interest-sub">Backend Engines & Scalable Automation</div>
+              <p class="interest-desc">Build automation tools, backend applications and Python-based solutions.</p>
+              <p class="interest-vision">Dedicated to writing clean, idiomatic Python that powers robust backend services, automated workflows, and high-throughput data processing engines. Focused on reliability, algorithm efficiency, and modular code architecture.</p>
+            </div>
+            <div class="interest-tags">
+              <span class="tag-pill">Automation Tools</span>
+              <span class="tag-pill">Backend Services</span>
+              <span class="tag-pill">API Architecture</span>
+              <span class="tag-pill">Scripting</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Full Stack Dev -->
+          <div class="interest-card">
+            <div>
+              <div class="interest-top">
+                <span class="badge-pill">SYSTEM CRAFT</span>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">03 / 03</span>
+              </div>
+              <div class="interest-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3>FULL STACK DEVELOPMENT</h3>
+              <div class="interest-sub">End-to-End Modern Web Engineering</div>
+              <p class="interest-desc">Create modern frontend and backend applications.</p>
+              <p class="interest-vision">Building seamless digital experiences from intuitive, fluid user interfaces down to secure database transactions and resilient server logic. Bridging design aesthetics with performance engineering.</p>
+            </div>
+            <div class="interest-tags">
+              <span class="tag-pill">Modern Frontend</span>
+              <span class="tag-pill">RESTful APIs</span>
+              <span class="tag-pill">Database Design</span>
+              <span class="tag-pill">System Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. PROJECTS SHOWCASE
+         ======================================================================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">04. Featured Engineering Work</span>
+          <h2 class="section-title">Project Showcase</h2>
+          <p class="section-subtitle">Explore interactive architectural builds solving real-world challenges in AI risk modeling, financial analytics, and campus automation.</p>
+        </div>
+
+        <!-- Project Switcher Tabs -->
+        <div class="project-tabs-bar">
+          <div class="project-tabs-list">
+            <button class="project-tab-btn active" data-index="0">01. Risk Classifier</button>
+            <button class="project-tab-btn" data-index="1">02. Expense Tracker</button>
+            <button class="project-tab-btn" data-index="2">03. Smart Canteen</button>
+          </div>
+
+          <div class="project-nav-arrows">
+            <button id="prevProjBtn" class="btn-arrow" aria-label="Previous Project">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <span id="projectCounter" class="project-counter">01 / 03</span>
+            <button id="nextProjBtn" class="btn-arrow" aria-label="Next Project">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Project Display Card -->
+        <div class="project-display-card">
+          <!-- Left: Details -->
+          <div>
+            <div class="project-badges-row">
+              <span id="projCategory" class="badge-pill">Machine Learning / Python</span>
+              <span id="projBadge" class="badge-pill" style="color: #6366f1;">AI & ML System</span>
+            </div>
+
+            <h3 id="projTitle" class="project-title">Transaction Risk Level Classifier</h3>
+            <p id="projSub" class="project-sub">AI/ML Financial Risk Assessment Engine</p>
+            <p id="projDesc" class="project-description">An intelligent classification system that analyzes financial transaction features to assess risk tiers (Low, Medium, High, Critical) in real time.</p>
+
+            <ul id="projFeatures" class="project-features-list">
+              <li><span>&gt;</span><span>Real-time heuristic & statistical risk classification</span></li>
+              <li><span>&gt;</span><span>Feature scaling and outlier anomaly detection</span></li>
+              <li><span>&gt;</span><span>Configurable threshold alert triggers for anomalies</span></li>
+            </ul>
+
+            <div id="projTags" class="skill-tags-wrap" style="margin-bottom: 1.5rem; border: none; padding: 0;">
+              <!-- Injected by script.js -->
+            </div>
+
+            <div class="project-actions-row">
+              <button id="openSimulatorBtn" class="btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>TEST INTERACTIVE SIMULATOR</span>
+              </button>
+              <a id="projGithubLink" href="https://github.com/saad082-alt/transaction-risk-classifier" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <!-- GitHub Icon -->
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>VIEW REPO</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Telemetry Preview -->
+          <div class="project-telemetry-box">
+            <div class="telemetry-top">
+              <span style="color: #ffffff; font-weight: 600; display: flex; align-items: center; gap: 0.4rem;">
+                <span class="status-dot"></span> SYSTEM TELEMETRY
+              </span>
+              <span>ENGINE v1.0</span>
+            </div>
+            <div class="telemetry-center">
+              <div class="telemetry-icon-circle">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h4 id="telemetryTitle" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Transaction Risk Level Classifier</h4>
+              <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); max-width: 260px; margin: 0 auto;">
+                Click simulator above to test parameters and observe real-time classification.
+              </p>
+            </div>
+            <div id="telemetryMetrics" class="telemetry-metrics-grid">
+              <!-- Injected by script.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. EXPERIENCE & EDUCATION
+         ======================================================================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">05. Track Record</span>
+          <h2 class="section-title">Experience & Academic Foundations</h2>
+          <p class="section-subtitle">Bridging academic rigor with real-world industry problem solving. Genuine credentials with zero fabrication.</p>
+        </div>
+
+        <div class="experience-grid">
+          <!-- Left: Dedicated Internship Card -->
+          <div class="internship-card">
+            <div class="internship-header">
+              <div class="internship-header-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #6366f1; font-weight: 600;">
+                  INDUSTRY INTERNSHIP
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                  <span class="status-dot"></span>
+                  <span>Completed (30 Days Intensive)</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="internship-role">Web Design & MERN Stack Developer Intern</h3>
+            <div class="internship-company">Brainybeam Info-Tech</div>
+
+            <div class="meta-row">
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                5th May 2024 – June 2024
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Ahmedabad, Gujarat, India
+              </span>
+            </div>
+
+            <p class="internship-desc">
+              Completed an intensive 30-day professional industry internship at Brainybeam Info-Tech focused on modern web design, MERN stack full-stack engineering, and developing the 'Fresh Fruit Hub' web platform.
+            </p>
+
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.6rem;">
+              Key Responsibilities & Deliverables
+            </div>
+            <ul class="resp-list">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Designed and developed 'Fresh Fruit Hub', a responsive full-stack web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) and Java/Web architectures.</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Crafted intuitive, responsive frontend interfaces with modern HTML5, CSS3, and JavaScript component architecture.</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Engineered backend RESTful API services for product catalog management, user cart workflows, and database CRUD operations.</span>
+              </li>
+            </ul>
+
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.4rem;">
+              Technologies Utilized
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem;">
+              <span class="tag-pill">MERN Stack</span>
+              <span class="tag-pill">React.js</span>
+              <span class="tag-pill">Node.js</span>
+              <span class="tag-pill">Express.js</span>
+              <span class="tag-pill">MongoDB</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">HTML5/CSS3</span>
+              <span class="tag-pill">REST APIs</span>
+            </div>
+
+            <div class="achievement-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span><strong>Core Deliverable:</strong> Designed, architected, and shipped the full-stack 'Fresh Fruit Hub' platform during the 30-day internship.</span>
+            </div>
+          </div>
+
+          <!-- Right: Academic Timeline -->
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>ACADEMIC MILESTONES</span>
+            </div>
+
+            <div class="timeline-track">
+              <!-- Milestones 1: JG University -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                    <span class="badge-pill" style="color: #6366f1;">CURRENT PURSUIT</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Present</span>
+                  </div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">B.Tech in Computer Science</h4>
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.6rem;">JG University, Ahmedabad</div>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Currently pursuing B.Tech CSE at JG University. Deepening expertise across artificial intelligence algorithms, distributed systems, predictive modeling, and scalable full-stack web applications.</p>
+                </div>
+              </div>
+
+              <!-- Milestones 2: LJ Polytechnic -->
+              <div class="timeline-item">
+                <div class="timeline-dot" style="background: #94a3b8;"></div>
+                <div class="timeline-card">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                    <span class="badge-pill">FOUNDATIONAL DIPLOMA</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Completed</span>
+                  </div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Diploma in Computer Engineering</h4>
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.6rem;">LJ Polytechnic, Ahmedabad</div>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Established core technical competence in hardware architecture, programming paradigms, relational database systems, and disciplined logic building.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. JOURNEY / CHRONICLES
+         ======================================================================= -->
+    <section id="journey" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">06. Chronicles</span>
+          <h2 class="section-title">Evolution & Academic Journey</h2>
+          <p class="section-subtitle">The journey of an aspiring computer scientist: from curious diploma beginnings to real-world engineering and future AI exploration.</p>
+        </div>
+
+        <div class="journey-timeline">
+          <div class="journey-center-line"></div>
+
+          <!-- Phase 1 -->
+          <div class="journey-step">
+            <div class="journey-content">
+              <div class="card" style="padding: 1.5rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #6366f1;">Phase 01: Foundation</span>
+                  <span class="badge-pill">Academic Genesis</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Diploma at LJ Polytechnic</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem;">Discovered the joy of programming and computational logic. Immersed in computer architecture, fundamentals of operating systems, C, basic scripting, and relational data.</p>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); border-top: 1px solid var(--border-subtle); padding-top: 0.6rem;">
+                  Cultivated a deep technical curiosity and disciplined problem-solving mindset.
+                </div>
+              </div>
+            </div>
+            <div class="journey-node">01</div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="journey-step">
+            <div class="journey-content">
+              <div class="card" style="padding: 1.5rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #6366f1;">Phase 02: Industry Experience</span>
+                  <span class="badge-pill">Industry Immersion</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Internship at Brainybeam Info-Tech</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem;">Stepped into real-world software workflows in Ahmedabad. Mastered MERN stack development, designed responsive interfaces, and engineered the 'Fresh Fruit Hub' full-stack project.</p>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); border-top: 1px solid var(--border-subtle); padding-top: 0.6rem;">
+                  Gained practical experience in MERN architectures, RESTful APIs, and commercial software delivery.
+                </div>
+              </div>
+            </div>
+            <div class="journey-node">02</div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="journey-step">
+            <div class="journey-content">
+              <div class="card" style="padding: 1.5rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #6366f1;">Phase 03: Higher Engineering</span>
+                  <span class="badge-pill">Academic Evolution</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">B.Tech in CSE at JG University</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem;">Currently pursuing B.Tech in Computer Science Engineering at JG University. Deepening expertise across advanced algorithms, intelligent predictive systems, and high-performance software architecture.</p>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); border-top: 1px solid var(--border-subtle); padding-top: 0.6rem;">
+                  Building production-grade projects like the Transaction Risk Classifier and Smart Canteen System.
+                </div>
+              </div>
+            </div>
+            <div class="journey-node">03</div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="journey-step">
+            <div class="journey-content">
+              <div class="card" style="padding: 1.5rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #6366f1;">Phase 04: The Horizon</span>
+                  <span class="badge-pill">Future Frontier</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Future AI & Full Stack Engineer</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem;">Aspiring to pioneer intelligent software systems, bridge artificial intelligence into daily human tools, and build resilient, world-class digital products.</p>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); border-top: 1px solid var(--border-subtle); padding-top: 0.6rem;">
+                  Dedicated to continuous learning, building innovative solutions, and pushing boundaries.
+                </div>
+              </div>
+            </div>
+            <div class="journey-node">04</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. CONTACT SECTION (WITH STRICT ZERO-OTP EMAIL VALIDATION)
+         ======================================================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">07. Contact & Connect</span>
+          <h2 class="section-title">Let's Build The Future Together.</h2>
+          <p class="section-subtitle">Whether you have an internship opportunity, an innovative project in mind, or simply want to chat about AI and technology, my inbox is always open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Channels -->
+          <div class="card">
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Connect Directly</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.5rem;">
+              Open to internships, collaborative projects, technical discussions, or exploring modern engineering possibilities together.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); background: var(--bg-primary); border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Ahmedabad, Gujarat, India</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); background: var(--bg-primary); border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Typically responds within 24 hours</span>
+              </div>
+            </div>
+
+            <!-- Email Box with Copy -->
+            <div class="direct-box">
+              <div class="direct-box-top">
+                <span>Primary Email</span>
+                <a href="mailto:ghanchisaad082@gmail.com" style="color: #6366f1;">Send Mail &rarr;</a>
+              </div>
+              <div class="direct-box-bottom">
+                <span class="direct-val">ghanchisaad082@gmail.com</span>
+                <button id="copyEmailBtn" class="btn-copy" title="Copy Email to Clipboard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+              <span id="copyEmailNotify" class="copy-notify" style="display: none;">✓ Email copied to clipboard!</span>
+            </div>
+
+            <!-- Phone Box with Copy -->
+            <div class="direct-box">
+              <div class="direct-box-top">
+                <span>Direct Mobile</span>
+                <a href="tel:8866365762" style="color: #6366f1;">Call Now &rarr;</a>
+              </div>
+              <div class="direct-box-bottom">
+                <span class="direct-val">+91 88663 65762</span>
+                <button id="copyPhoneBtn" class="btn-copy" title="Copy Phone Number to Clipboard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+              <span id="copyPhoneNotify" class="copy-notify" style="display: none;">✓ Phone number copied to clipboard!</span>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-list">
+              <a href="https://github.com/saad082-alt" target="_blank" rel="noopener noreferrer" class="social-item">
+                <div>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub Profile</span>
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+
+              <a href="https://www.linkedin.com/in/saad-ghanchi-0715773ba" target="_blank" rel="noopener noreferrer" class="social-item">
+                <div>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <span>LinkedIn Profile</span>
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="card">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.85rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+              <span style="color: #ffffff; font-weight: 600;">Send a Direct Message</span>
+              <span>Routes to Inbox</span>
+            </div>
+
+            <!-- Success Box (Hidden by default) -->
+            <div id="formSuccessBox" class="form-success-box" style="display: none;">
+              <div class="success-icon-circle">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Dispatched Directly to Saad's Email!</h4>
+              <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; max-width: 440px; margin: 0 auto 1.5rem auto;">
+                Thank you for connecting! Your details and message have been routed directly to <span style="color: #6366f1; font-weight: 600;">ghanchisaad082@gmail.com</span>. Ghanchi Saad will get back to your email shortly.
+              </p>
+              <button id="resetFormBtn" class="btn-secondary" style="margin: 0 auto;">SEND ANOTHER MESSAGE</button>
+            </div>
+
+            <!-- Form -->
+            <form id="contactForm" novalidate>
+              <!-- Hidden Honeypot field for bot/spam trapping -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="b_fax_shield">Leave this field empty</label>
+                <input type="text" id="b_fax_shield" name="b_fax_shield" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Your Name *</label>
+                  <input type="text" id="contactName" name="name" required class="form-control" placeholder="e.g. Alex Morgan">
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Your Email *</label>
+                  <input type="email" id="contactEmail" name="email" required class="form-control" placeholder="e.g. alex@company.com">
+                  <div id="emailFeedback" class="email-feedback"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject / Topic</label>
+                <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="e.g. Internship Opportunity / Collaboration">
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message *</label>
+                <textarea id="contactMessage" name="message" required class="form-control" placeholder="Share project details, inquiry, or discuss innovative ideas..."></textarea>
+              </div>
+
+              <!-- General Error Box -->
+              <div id="generalErrorBox" class="general-error-box" style="display: none;"></div>
+
+              <button type="submit" id="submitBtn" class="btn-submit">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span>SEND MESSAGE DIRECTLY</span>
+              </button>
+
+              <div class="form-security-footer">
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span>Instant syntax, disposable blocker & MX verification (No OTP needed)</span>
+                </div>
+                <div>Routes to <strong style="color: #cbd5e1;">ghanchisaad082@gmail.com</strong></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; color: var(--accent-primary);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            </div>
+            <span style="font-family: var(--font-display); font-weight: 700; color: #ffffff;">Ghanchi Saad</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">&bull; JG UNIVERSITY</span>
+          </div>
+          <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); line-height: 1.5;">
+            "Building Today, Exploring Tomorrow." B.Tech CSE student at JG University. Focused on Python, AI Engineering, and full stack solutions.
+          </p>
+        </div>
+
+        <div class="footer-social-row">
+          <a href="https://github.com/saad082-alt" target="_blank" rel="noopener noreferrer" class="btn-arrow" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/saad-ghanchi-0715773ba" target="_blank" rel="noopener noreferrer" class="btn-arrow" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:ghanchisaad082@gmail.com" class="btn-arrow" title="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <a href="tel:8866365762" class="btn-arrow" title="Phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+          <button id="scrollTopBtn" class="btn-scroll-top" title="Back to top">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ghanchi Saad. All rights reserved.</div>
+        <div>Pure HTML5, CSS3 &amp; Vanilla JavaScript &bull; B.Tech CSE JG University</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. INTERACTIVE PROJECT SIMULATOR MODAL (PURE VANILLA JS)
+       ========================================================================= -->
+  <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div style="margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem;">
+          <span id="modalCategory">Category</span>
+          <span>&bull;</span>
+          <span id="modalBadge" style="color: #6366f1;">Badge</span>
+        </div>
+        <h2 id="modalTitle" style="font-size: 1.75rem; line-height: 1.2; margin-bottom: 0.5rem;">Project Title</h2>
+        <p id="modalLongDesc" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">Detailed description...</p>
+      </div>
+
+      <!-- Metrics -->
+      <div id="modalMetrics" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
+        <!-- Injected by script.js -->
+      </div>
+
+      <!-- Simulator 1: Risk Classifier -->
+      <div id="riskSimContainer" class="sim-box" style="display: none;">
+        <div class="sim-header">
+          <span style="color: #ffffff; font-weight: 600;">Interactive Risk Classification Engine</span>
+          <span style="color: #10b981;">STATUS: LIVE</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1rem;">
+          <div>
+            <label class="form-label" style="font-size: 0.7rem;">Amount ($)</label>
+            <input type="number" id="simRiskAmount" class="form-control" value="3450">
+          </div>
+          <div>
+            <label class="form-label" style="font-size: 0.7rem;">Foreign IP Location?</label>
+            <select id="simRiskForeign" class="form-control">
+              <option value="yes" selected>Yes (Cross-border)</option>
+              <option value="no">No (Domestic IP)</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" style="font-size: 0.7rem;">Velocity (Mins since last)</label>
+            <input type="number" id="simRiskVelocity" class="form-control" value="2">
+          </div>
+        </div>
+        <button id="runRiskEngineBtn" class="btn-primary" style="width: 100%; justify-content: center;">
+          RUN RISK CLASSIFICATION ENGINE
+        </button>
+        <div id="riskResultBox" style="display: none; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; padding: 0.85rem; border-radius: 8px; background: #161e31; border: 1px solid #1e2638;"></div>
+      </div>
+
+      <!-- Simulator 2: Expense Tracker -->
+      <div id="expenseSimContainer" class="sim-box" style="display: none;">
+        <div class="sim-header">
+          <span style="color: #ffffff; font-weight: 600;">Live Expense Ledger Simulator</span>
+          <span style="color: #10b981;">STATUS: READY</span>
+        </div>
+        <form id="expenseSimForm" style="display: grid; grid-template-columns: 2fr 1fr auto; gap: 0.5rem; margin-bottom: 1rem;">
+          <input type="text" id="expName" class="form-control" placeholder="Expense description" required>
+          <input type="number" id="expAmount" class="form-control" placeholder="Amount (₹)" required>
+          <button type="submit" class="btn-primary" style="padding: 0.6rem 1rem;">+ Add</button>
+        </form>
+        <div id="expenseSimList" style="display: flex; flex-direction: column; gap: 0.4rem; max-height: 180px; overflow-y: auto;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0.75rem; border-radius: 6px; background: #161e31; font-family: monospace; font-size: 0.75rem; border: 1px solid #1e2638;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #f1f5f9;">Cloud Server Hosting</span><span style="font-size: 0.65rem; color: #94a3b8; background: #0b0f19; padding: 0.1rem 0.4rem; border-radius: 4px;">Tech</span></div>
+            <span style="font-weight: 700; color: #f1f5f9;">₹850</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0.75rem; border-radius: 6px; background: #161e31; font-family: monospace; font-size: 0.75rem; border: 1px solid #1e2638;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #f1f5f9;">AI & Data Course Books</span><span style="font-size: 0.65rem; color: #94a3b8; background: #0b0f19; padding: 0.1rem 0.4rem; border-radius: 4px;">Education</span></div>
+            <span style="font-weight: 700; color: #f1f5f9;">₹1,200</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulator 3: Smart Canteen Token -->
+      <div id="canteenSimContainer" class="sim-box" style="display: none;">
+        <div class="sim-header">
+          <span style="color: #ffffff; font-weight: 600;">Real-Time Kitchen Queue Simulator</span>
+          <span style="color: #10b981;">STATUS: ONLINE</span>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); margin-bottom: 0.85rem;">Click an order item below to generate a digital token:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <button class="btn-secondary btn-canteen-item" data-item="Masala Dosa Combo" style="padding: 0.5rem 0.85rem; font-size: 0.75rem;">+ Masala Dosa Combo</button>
+          <button class="btn-secondary btn-canteen-item" data-item="Cold Brew Coffee" style="padding: 0.5rem 0.85rem; font-size: 0.75rem;">+ Cold Brew Coffee</button>
+          <button class="btn-secondary btn-canteen-item" data-item="Veg Club Sandwich" style="padding: 0.5rem 0.85rem; font-size: 0.75rem;">+ Veg Club Sandwich</button>
+          <button class="btn-secondary btn-canteen-item" data-item="Thali Special" style="padding: 0.5rem 0.85rem; font-size: 0.75rem;">+ Thali Special</button>
+        </div>
+        <div id="canteenTokenBox" style="display: none; padding: 1rem; border-radius: 8px; background: #161e31; border: 1px solid #1e2638;"></div>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.4rem;">
+          Technologies Utilized
+        </div>
+        <div id="modalTechTags" style="display: flex; flex-wrap: wrap; gap: 0.4rem;"></div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
+        <a id="modalGithubLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>VIEW SOURCE REPO</span>
+        </a>
+        <button id="modalDismissBtn" class="btn-primary">CLOSE PREVIEW</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure Vanilla JS -->
+  <script src="script.js"></script>
+</body>
 </html>
